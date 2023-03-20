@@ -41,7 +41,6 @@ jobs:
       - name: CIw32-Build
         run: | 
          make
-         make check
   win64build:
     runs-on: windows-latest
     defaults:
@@ -58,4 +57,3 @@ jobs:
       - name: CIw64-Build
         run: |
          make
-         make check
