@@ -3,6 +3,12 @@
 #include <richedit.h>
 #include "resource.h"
 
+#define NUMCHECK(x) x - x - 1 == 1
+#if NUMCHECK(VERMAJ) || NUMCHECK(VERMIN) || NUMCHECK(VERBLD)
+#undef VERMAJ
+#undef VERMIN
+#undef VERBLD
+#endif
 #if defined(VERMAJ) && defined(VERMIN) && defined(VERBLD)
 // awesome, we have version info
 #else
