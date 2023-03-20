@@ -37,7 +37,7 @@ jobs:
         with:
           msystem: MINGW32
           update: true
-          install: base-devel git mingw-w64-i686-gcc mingw-w64-i686-toolchain mingw-w64-i686-gtk3 mingw-w64-i686-goocanvas
+          install: base-devel git zip mingw-w64-i686-gcc mingw-w64-i686-toolchain mingw-w64-i686-gtk3 mingw-w64-i686-goocanvas
       - name: CIw32-Build
         run: | 
          make dist
@@ -57,7 +57,7 @@ jobs:
         with:
           msystem: MINGW64
           update: true
-          install: base-devel git mingw-w64-x86_64-gcc mingw-w64-x86_64-toolchain mingw-w64-x86_64-gtk3 mingw-w64-x86_64-goocanvas
+          install: base-devel git zip mingw-w64-x86_64-gcc mingw-w64-x86_64-toolchain mingw-w64-x86_64-gtk3 mingw-w64-x86_64-goocanvas
       - name: CIw64-Build
         run: |
          make dist

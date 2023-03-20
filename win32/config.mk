@@ -27,7 +27,7 @@
 # For 64 bit:
 # MINGW_ROOT=../../msys64/mingw64
 #
-MINGW_ROOT=/mingw64
+MINGW_ROOT=$(MINGW_PREFIX)
 
 PKG_CONFIG_PATH = "$(abspath $(MINGW_ROOT)/lib/pkgconfig)"
 
