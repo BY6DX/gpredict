@@ -40,7 +40,11 @@ jobs:
           install: base-devel git mingw-w64-i686-gcc mingw-w64-i686-toolchain mingw-w64-i686-gtk3 mingw-w64-i686-goocanvas
       - name: CIw32-Build
         run: | 
-         make
+         make dist
+      - uses: actions/upload-artifact@v3
+        with:
+          name: gpredict-win32
+          path: gpredict*.zip
   win64build:
     runs-on: windows-latest
     defaults:
@@ -56,4 +60,8 @@ jobs:
           install: base-devel git mingw-w64-x86_64-gcc mingw-w64-x86_64-toolchain mingw-w64-x86_64-gtk3 mingw-w64-x86_64-goocanvas
       - name: CIw64-Build
         run: |
-         make
+         make dist
+      - uses: actions/upload-artifact@v3
+        with:
+          name: gpredict-win64
+          path: gpredict*.zip
