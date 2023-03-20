@@ -44,7 +44,7 @@ jobs:
       - uses: actions/upload-artifact@v3
         with:
           name: gpredict-win32
-          path: gpredict*.zip
+          path: ${{ github.workspace }}/win32/gpredict*.zip
   win64build:
     runs-on: windows-latest
     defaults:
@@ -64,4 +64,4 @@ jobs:
       - uses: actions/upload-artifact@v3
         with:
           name: gpredict-win64
-          path: gpredict*.zip
+          path: ${{ github.workspace }}/win32/gpredict*.zip
